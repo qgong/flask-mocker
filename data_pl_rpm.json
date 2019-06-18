@@ -1,0 +1,62 @@
+{
+    "ComputeNode": {
+        "microcode_ctl-2.1-12.20.el7_2": {
+            "x86_64": [
+                "x86_64"
+            ],
+            "src": [
+                "x86_64"
+            ]
+        },
+        "microcode_ctl-debuginfo-2.1-12.20.el7_2": {
+            "x86_64": [
+                "x86_64"
+            ]
+        }
+    },
+    "Workstation": {
+        "microcode_ctl-2.1-12.20.el7_2": {
+            "x86_64": [
+                "x86_64"
+            ],
+            "src": [
+                "x86_64"
+            ]
+        },
+        "microcode_ctl-debuginfo-2.1-12.20.el7_2": {
+            "x86_64": [
+                "x86_64"
+            ]
+        }
+    },
+    "Client": {
+        "microcode_ctl-2.1-12.20.el7_2": {
+            "x86_64": [
+                "x86_64"
+            ],
+            "src": [
+                "x86_64"
+            ]
+        },
+        "microcode_ctl-debuginfo-2.1-12.20.el7_2": {
+            "x86_64": [
+                "x86_64"
+            ]
+        }
+    },
+    "Server": {
+        "microcode_ctl-2.1-12.20.el7_2": {
+            "x86_64": [
+                "x86_64"
+            ],
+            "src": [
+                "x86_64"
+            ]
+        },
+        "microcode_ctl-debuginfo-2.1-12.20.el7_2": {
+            "x86_64": [
+                "x86_64"
+            ]
+        }
+    }
+}

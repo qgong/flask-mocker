@@ -1,0 +1,100 @@
+---
+document: modulemd
+version: 2
+data:
+  name: rust-toolset
+  stream: rhel8
+  version: 8000120190530030816
+  context: 4f19bdec
+  summary: Rust
+  description: >-
+    Rust Toolset
+  license:
+    module:
+    - MIT
+  xmd:
+    mbs:
+      scmurl: git://pkgs.devel.redhat.com/modules/rust-toolset?#d874991ccc2faceb56e323d1b0c42097ed33e922
+      buildrequires:
+        platform:
+          stream: el8.0.1
+          ursine_rpms: 
+          filtered_rpms: []
+          version: 2
+          koji_tag: module-rhel-8.0.1-build
+          context: 00000000
+          stream_collision_modules: 
+          ref: virtual
+        llvm-toolset:
+          stream: rhel8
+          filtered_rpms: []
+          version: 8000020190511064904
+          koji_tag: module-llvm-toolset-rhel8-8000020190511064904-55190bc5
+          context: 55190bc5
+          ref: ac9ecbe8a49a7b525488b010277d8a3d03737f14
+        rust-toolset:
+          stream: rhel8
+          filtered_rpms: []
+          version: 8000120190524194957
+          koji_tag: module-rust-toolset-rhel8-8000120190524194957-4f19bdec
+          context: 4f19bdec
+          ref: 6564b8c1fad23dbc761c46460bb25a475f2144b5
+      mse: TRUE
+      rpms:
+        cargo-vendor:
+          ref: 3ae40f0c11cd3998385cc4af91cf262436bf3753
+        rust:
+          ref: af5bb2c6cfe304d8bce725d290d8f22ae532d05f
+        rust-toolset:
+          ref: 4b70dd53fa3546456d18fbd116005da1a981dae4
+      commit: d874991ccc2faceb56e323d1b0c42097ed33e922
+  dependencies:
+  - buildrequires:
+      llvm-toolset: [rhel8]
+      platform: [el8.0.1]
+      rust-toolset: [rhel8]
+    requires:
+      llvm-toolset: [rhel8]
+      platform: [el8]
+  profiles:
+    common:
+      rpms:
+      - rust-toolset
+  api:
+    rpms:
+    - cargo
+    - cargo-doc
+    - cargo-vendor
+    - clippy
+    - rls
+    - rust
+    - rust-analysis
+    - rust-doc
+    - rust-gdb
+    - rust-lldb
+    - rust-src
+    - rust-std-static
+    - rust-toolset
+    - rustfmt
+  components:
+    rpms:
+      cargo-vendor:
+        rationale: Tool for bundling Rust dependencies
+        repository: git://pkgs.devel.redhat.com/rpms/cargo-vendor
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/cargo-vendor
+        ref: stream-rhel-8-rhel-8.0.1
+        buildorder: 1
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      rust:
+        rationale: Rust compiler and tools
+        repository: git://pkgs.devel.redhat.com/rpms/rust
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/rust
+        ref: stream-rhel-8-rhel-8.0.1
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      rust-toolset:
+        rationale: Meta package for rust-toolset.
+        repository: git://pkgs.devel.redhat.com/rpms/rust-toolset
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/rust-toolset
+        ref: stream-rhel-8-rhel-8.0.1
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+...

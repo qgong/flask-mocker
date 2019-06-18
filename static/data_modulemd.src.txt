@@ -1,0 +1,52 @@
+document: modulemd
+version: 2
+data:
+  summary: Rust
+  description: Rust Toolset
+  name: rust-toolset
+  stream: rhel8
+  license:
+    module: [MIT]
+  dependencies:
+    - buildrequires:
+        platform: [el8]
+        llvm-toolset: [rhel8]
+        rust-toolset: [rhel8]
+      requires:
+        platform: [el8]
+        llvm-toolset: [rhel8]
+  profiles:
+    common:
+      rpms:
+        - rust-toolset
+  api:
+    rpms:
+      - cargo
+      - cargo-doc
+      - cargo-vendor
+      - clippy
+      - rls
+      - rust
+      - rust-analysis
+      - rust-doc
+      - rust-gdb
+      - rust-lldb
+      - rust-src
+      - rust-std-static
+      - rust-toolset
+      - rustfmt
+
+  components:
+    rpms:
+      rust-toolset:
+        rationale: Meta package for rust-toolset.
+        ref: stream-rhel-8-rhel-8.0.1
+        buildorder: 0
+      rust:
+        rationale: Rust compiler and tools
+        ref: stream-rhel-8-rhel-8.0.1
+        buildorder: 0
+      cargo-vendor:
+        rationale: Tool for bundling Rust dependencies
+        ref: stream-rhel-8-rhel-8.0.1
+        buildorder: 1
